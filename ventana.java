@@ -10,13 +10,17 @@ import java.awt.Insets;
 public class ventana{
    public static void main(String []arg){
 
+	//Crear la ventana
 	JFrame frame = new JFrame("Login");
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-	Container cont = frame.getContentPane();
+	
+	//Crear el contenedor y agregarselo a la ventana
+     	Container cont = frame.getContentPane();
 	cont.setLayout(new GridBagLayout());
 
 	GridBagConstraints gbc = new GridBagConstraints();
+	
+	//Creamos los componentes de la ventana
 	JLabel e1 = new JLabel("User:");
 	JLabel e2 = new JLabel("Password:");
 	JTextField user = new JTextField();
@@ -50,7 +54,7 @@ public class ventana{
 	gbc.gridx = 1;
 	gbc.gridy = 2;
 	cont.add(ok, gbc);
-
+	//Adaptamos la ventana a los componentes y la ponemos visible
 	frame.pack();
 	frame.setVisible(true);
 
